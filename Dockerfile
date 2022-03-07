@@ -1,4 +1,4 @@
-FROM node:12
+FROM node:16
 
 WORKDIR /app
 
@@ -8,8 +8,6 @@ RUN npm install
 
 COPY . .
 
-ENV PORT=5000
-
-EXPOSE 5000
+EXPOSE 8080
 
 CMD [ "npm", "start" ]
